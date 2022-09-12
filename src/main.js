@@ -22,36 +22,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const formularioLogin = document.querySelector("#login");
     const formularioCadastro = document.querySelector("#cadastro");
 
-    //tirando o formulario de login e colcoando de cadastro
-    document.querySelector("#linkCadastro").addEventListener("click", e => {
-        e.preventDefault();
-        formularioLogin.classList.add("formularioCadastro");
-        formularioCadastro.classList.remove("formularioCadastro");
-    });
+    //tirando o formulario de login e colocando de cadastro
+    // document.querySelector("#linkCadastro").addEventListener("click", e => {
+    //     e.preventDefault();
+    //     formularioLogin.classList.add("formularioCadastro");
+    //     formularioCadastro.classList.remove("formularioCadastro");
+    // });
 
-    //tirando o formulario de cadastro e colcoando de login
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        formularioLogin.classList.remove("formularioCadastro");
-        formularioCadastro.classList.add("formularioCadastro");
-    });
+    //tirando o formulario de cadastro e colocando de login
+    // document.querySelector("#linkLogin").addEventListener("click", e => {
+    //     e.preventDefault();
+    //     formularioLogin.classList.remove("formularioCadastro");
+    //     formularioCadastro.classList.add("formularioCadastro");
+    // });
 
     //erro de login
     formularioLogin.addEventListener("submit", e => {
         e.preventDefault();
-        criaMsgFormulario(formularioLogin, "error", "Nome de usuario ou senha errados");
+        criaMsgFormulario(formularioLogin, "error", "E-mail ou senha inválidos");
     });
 
     //erro
-    document.querySelectorAll(".inputFormulario").forEach(elemImput => {
-        elemImput.addEventListener("blur", e => {
-            if (e.target.id === "cadastroUsuario" && e.target.value.length > 0 && e.target.value.length < 10) {
-                erroDeInput(elemImput, "Nome de Usuario deve conter mais de 10 letras");
-            }
-        });
+//     document.querySelectorAll(".inputFormulario").forEach(elemImput => {
+//         elemImput.addEventListener("blur", e => {
+//             if (e.target.id === "cadastroUsuario" && e.target.value.length > 0 && e.target.value.length < 10) {
+//                 erroDeInput(elemImput, "Nome de Usuario deve conter mais de 10 letras");
+//             }
+//         });
 
-        elemImput.addEventListener("input", e => {
-            limpaErro(elemImput);
-        });
-    });
+//         elemImput.addEventListener("input", e => {
+//             limpaErro(elemImput);
+//         });
+//     });
 });
