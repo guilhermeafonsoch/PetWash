@@ -3,9 +3,9 @@
 const HOSTNAME = "petwash.cjpk81kuqb7j.us-east-1.rds.amazonaws.com";
 const USERNAME = "root";
 const PORT = "3306";
-const PASSWORD = "a^NaHgGzc*M4";
-$dbName = "";
-$table = "";
+const PASSWORD = "^aNaHgGzc*M4";
+$dbName = "petwash";
+$table = "petwash.customer";
 
 // $salt = '256 caracteres';
 // hash('sha256','senha'.$salt);
@@ -39,10 +39,13 @@ function insertDb($dbName, $table, $data){
     $conn = conexao($dbName);
 	$dados = $conn->query($query);
 
-    $close = fecha_conexao($connection);
+    $close = fecha_conexao($conn);
 
     return $dados;
 }
+
+insertDb($dbName, $table, ["username" => "Tony", "email" => "tony@gmail.com", "senha" => "auau123"]);
+
 
 function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
@@ -52,7 +55,7 @@ function selectDB($dbName, $table, $campos = '*', $where = ''){
     $conn = conexao($dbName);
 	$dados = $conn->query($query)->fetch_all(MYSQLI_ASSOC);
     
-    $close = fecha_conexao($connection);
+    $close = fecha_conexao($conn);
 
     return $dados;
 }
@@ -69,7 +72,7 @@ function deleteIdDb($dbName, $table, $id_del = '', $where = ''){
     $conn = conexao($dbName);
 	$dados = $conn->query($query);
 
-    $close = fecha_conexao($connection);
+    $close = fecha_conexao($conn);
 
     return $dados;
 }
@@ -79,7 +82,7 @@ function updateBanco($dbName, $table, $set, $where){
     $conn = conexao($dbName);
 	$dados = $conn->query($query);
 
-    $close = fecha_conexao($connection);
+    $close = fecha_conexao($conn);
 
     return $dados;
 };
