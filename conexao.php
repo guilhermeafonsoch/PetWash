@@ -44,8 +44,8 @@ function insertDb($dbName, $table, $data){
     return $dados;
 }
 
-insertDb($dbName, $table, ["username" => "Tony", "email" => "tony@gmail.com", "senha" => "auau123"]);
-
+// Funciona o insert
+// insertDb($dbName, $table, ["username" => "OutroTony", "email" => "tony2@gmail.com", "senha" => "auau123123"]);
 
 function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
