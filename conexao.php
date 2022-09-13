@@ -6,7 +6,7 @@ const PORT = "3306";
 const PASSWORD = "^aNaHgGzc*M4";
 $dbName = "petwash";
 $table = "petwash.customer";
-
+// Teste
 // $salt = '256 caracteres';
 // hash('sha256','senha'.$salt);
 
