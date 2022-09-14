@@ -4,14 +4,14 @@ const HOSTNAME = "petwash.cjpk81kuqb7j.us-east-1.rds.amazonaws.com";
 const USERNAME = "root";
 const PORT = "3306";
 const PASSWORD = "^aNaHgGzc*M4";
-const DBNAME = "petwash";
+$dbName = "petwash";
 $table = "petwash.customer";
 
 // $salt = '256 caracteres';
 // hash('sha256','senha'.$salt);
 
 function conexao($dbName){
-    $connection = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, DBNAME, PORT);
+    $connection = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, $dbName, PORT);
     mysqli_set_charset($connection,"utf8");
     
     if (!$connection) {
@@ -44,21 +44,8 @@ function insertDb($dbName, $table, $data){
     return $dados;
 }
 
-
-$con = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, DBNAME);
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-  }
-
-$sql = "INSERT INTO petwash.customer (username, email, senha) VALUES ('Tony', 'tony@gmail.com', 'auau123')";
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
+// Funciona o insert
+// insertDb($dbName, $table, ["username" => "OutroTony", "email" => "tony2@gmail.com", "senha" => "auau123123"]);
 
 function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
