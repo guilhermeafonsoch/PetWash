@@ -1,6 +1,7 @@
 <?php
 
 include 'secret.php';
+
 // $salt = '256 caracteres';
 // hash('sha256','senha'.$salt);
 
