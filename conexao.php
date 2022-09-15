@@ -1,12 +1,6 @@
 <?php
 
-const HOSTNAME = "petwash.cjpk81kuqb7j.us-east-1.rds.amazonaws.com";
-const USERNAME = "root";
-const PORT = "3306";
-const PASSWORD = "^aNaHgGzc*M4";
-$dbName = "petwash";
-$table = "petwash.customer";
-
+include 'secret.php';
 // $salt = '256 caracteres';
 // hash('sha256','senha'.$salt);
 
@@ -45,7 +39,7 @@ function insertDb($dbName, $table, $data){
 }
 
 // Funciona o insert
-// insertDb($dbName, $table, ["username" => "OutroTony", "email" => "tony2@gmail.com", "senha" => "auau123123"]);
+//insertDb($dbName, $table, ["username" => "Toff", "email" => "toffiano@gmail.com", "senha" => "maluco1234"]);
 
 function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
