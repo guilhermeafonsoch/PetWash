@@ -1,6 +1,6 @@
 <?php
 
-include 'secret.php';
+include '/xampp/htdocs/PetWash/secrets/secret.php';
 
 // $salt = '256 caracteres';
 // hash('sha256','senha'.$salt);
@@ -40,7 +40,7 @@ function insertDb($dbName, $table, $data){
 }
 
 // Funciona o insert
-//insertDb($dbName, $table, ["username" => "Toff", "email" => "toffiano@gmail.com", "senha" => "maluco1234"]);
+insertDb($dbName, $table, ["username" => "Mili", "email" => "milisdds@gmail.com", "senha" => "aldeiaDaSerra"]);
 
 function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
