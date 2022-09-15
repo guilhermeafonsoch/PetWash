@@ -1,5 +1,5 @@
 <?php 
-const HOSTNAME = "m";
+const HOSTNAME = "";
 const USERNAME = "";
 const PORT = "";
 const PASSWORD = "";
