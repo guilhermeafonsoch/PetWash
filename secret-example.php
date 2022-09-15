@@ -5,4 +5,5 @@ const PORT = "";
 const PASSWORD = "";
 $dbName = "";
 $table = "";
+const SECRET_PATH = "";
 ?>
