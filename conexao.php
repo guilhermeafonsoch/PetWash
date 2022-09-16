@@ -13,6 +13,8 @@ function conexao($dbName){
         die("Connection failed: " . mysqli_connect_error());
     }
 
+    echo "estou conectado";
+
     return $connection;
 }
 
@@ -40,7 +42,7 @@ function insertDb($dbName, $table, $data){
 }
 
 // Funciona o insert
-insertDb($dbName, $table, ["username" => "gato", "email" => "gatorods@gmail.com", "senha" => "gatorico"]);
+//insertDb($dbName, $table, ["username" => "gato", "email" => "gatorods@gmail.com", "senha" => "gatorico"]);
 
 function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
