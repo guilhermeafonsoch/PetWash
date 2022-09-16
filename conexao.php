@@ -40,13 +40,13 @@ function insertDb($dbName, $table, $data){
 }
 
 // Funciona o insert
-insertDb($dbName, $table, ["username" => "gato", "email" => "gatorods@gmail.com", "senha" => "gatorico"]);
+// insertDb($dbName, $table, ["username" => "gato", "email" => "gatorods@gmail.com", "senha" => "gatorico"]);
 
 function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
         $where = ' WHERE ' . $where; 
     }
-    $query = "SELECT $campos FROM $table" . $where;
+    $query = "SELECT $campos FROM $dbName.$table" . $where;
     $conn = conexao($dbName);
 	$dados = $conn->query($query)->fetch_all(MYSQLI_ASSOC);
     
