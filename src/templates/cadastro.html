@@ -19,32 +19,40 @@
 <!-- Formulario de Cadastro -->
     <div class="container">
 
-        <form class="formulario" id="cadastro">
+        <form class="formulario" id="cadastro" action="../../signin.php" method="POST">
 
             <h1 class="tituloFormulario">Cadastro</h1>
             <div class="msgFormulario msgFormularioError"></div>
 
             <!--  Input Nome de Usuario -->
             <div class="gpInputFormulario">
-                <input type="text" id="nomeUsuario" class="inputFormulario" autofocus placeholder="Nome de Usuario">
+
+                <input type="text" id="nomeUsuario" class="inputFormulario" autofocus placeholder="Nome de Usuario" name="username">
+
                 <div class="inputFormularioErrorMsg"></div>
             </div>
             
             <!--  Input Email -->
             <div class="gpInputFormulario">
-                <input type="text" id="emailUsuario" class="inputFormulario" autofocus placeholder="Email">
+
+                <input type="text" id="emailUsuario" class="inputFormulario" autofocus placeholder="Email" name="email">
+
                 <div class="inputFormularioErrorMsg"></div>
             </div>
             
             <!--  Input Senha -->
             <div class="gpInputFormulario">
-                <input type="password" id="senhaUsuario" class="inputFormulario" autofocus placeholder="Senha">
+
+                <input type="password" id="senhaUsuario" class="inputFormulario" autofocus placeholder="Senha" name="senha">
+
                 <div class="inputFormularioErrorMsg"></div>
             </div>
 
             <!--  Input confirma a senha -->
             <div class="gpInputFormulario">
-                <input type="password" id="confirmaSenhaUsuario" class="inputFormulario" autofocus placeholder="Confirmar senha">
+
+                <input type="password" id="confirmaSenhaUsuario" class="inputFormulario" autofocus placeholder="Confirmar senha" name="senha">
+
                 <div class="inputFormularioErrorMsg"></div>
             </div>
 
