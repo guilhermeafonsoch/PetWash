@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <!--Icone e import de css -->
+    <link rel="shortcut icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="styles/cadastro.css">
+</head>
+<body>
+
+    <div class="logo">
+        <!-- <img src="img/logo.png" alt="petshop"> -->
+    </div>
+
+<!-- Formulario de Cadastro -->
+    <div class="container">
+
+        <form class="formulario" id="cadastro" action="cadastra.php" method="POST">
+
+            <h1 class="tituloFormulario">Cadastro</h1>
+            <div class="msgFormulario msgFormularioError"></div>
+
+            <!--  Input Nome de Usuario -->
+            <div class="gpInputFormulario">
+
+                <input type="text" id="nomeUsuario" class="inputFormulario" autofocus placeholder="Nome de Usuario" name="username">
+
+                <div class="inputFormularioErrorMsg"></div>
+            </div>
+            
+            <!--  Input Email -->
+            <div class="gpInputFormulario">
+
+                <input type="text" id="emailUsuario" class="inputFormulario" autofocus placeholder="Email" name="email">
+
+                <div class="inputFormularioErrorMsg"></div>
+            </div>
+            
+            <!--  Input Senha -->
+            <div class="gpInputFormulario">
+
+                <input type="password" id="senhaUsuario" class="inputFormulario" autofocus placeholder="Senha" name="senha">
+
+                <div class="inputFormularioErrorMsg"></div>
+            </div>
+
+            <!--  Input confirma a senha -->
+            <div class="gpInputFormulario">
+
+                <input type="password" id="confirmaSenhaUsuario" class="inputFormulario" autofocus placeholder="Confirmar senha" name="confirma_senha">
+
+                <div class="inputFormularioErrorMsg"></div>
+            </div>
+
+            <!--  Botao de confirmar cadastro -->
+            <button class="botaoContinueFormulario" id="botaoCadastro" type="submit">Confirmar</button>
+
+            <!--  Link para Pagina de Login -->
+            <p class="textoFormulario">
+                <a class="linkFormulario" href="index.html" id="linkLogin">Ja tem uma conta? Faca login aqui</a>
+            </p>
+            
+        </form>
+
+    </div>
+</body>
+</html>

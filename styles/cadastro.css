@@ -1,0 +1,142 @@
+body {
+    --color-primary: #5AC88A;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+    margin: 0;
+    height: 100vh;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /*background-image: url(/src/img/dog5.jpg);*/
+    display: flex;
+    background-position: center;
+    background-size:cover;
+    background-color: #FAAD83;
+}
+
+/*MUDAR ESTA FICNADO GRNDE E INDO EMCIMA DO FORMULARIO*/
+.logo {
+    position:absolute;
+    top: 2%;
+    margin: 5px;
+    justify-content: center;
+}
+
+.container {
+    margin: 1rem;
+    padding: 2rem;
+    width: 400px;
+    max-width: 400px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #f88d54;
+}
+
+.container,
+.inputFormulario,
+.botaoContinueFormulario {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.formularioCadastro {
+    display: none;
+}
+
+.formulario > *:first-child {
+    margin-top: 0;
+}
+
+.formulario > *:last-child {
+    margin-bottom: 0;
+}
+
+.tituloFormulario {
+    margin-bottom: 2rem;
+    text-align: center;
+    /**/
+}
+
+.msgFormulario {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.msgFormularioSuccess {
+    color: var(--color-success);
+}
+
+.msgFormularioError {
+    color: var(--color-error);
+}
+
+.gpInputFormulario {
+    margin-bottom: 1rem;
+}
+
+.inputFormulario {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.inputFormulario:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+}
+
+.inputErrorFormulario {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.inputFormularioErrorMsg {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.botaoContinueFormulario {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.botaoContinueFormulario:hover {
+    background: var(--color-primary-dark);
+}
+
+.botaoContinueFormulario:active {
+    transform: scale(0.98);
+}
+
+.textoFormulario {
+    text-align: center;
+}
+
+.linkFormulario {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkFormulario:hover {
+    text-decoration: underline;
+}
+
