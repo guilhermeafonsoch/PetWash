@@ -43,6 +43,7 @@ function login_auth($response){
     if (sizeof($data) > 0) {
         $where= "customer_id = " . "'" . $data[0]['customer_id'] . "';"; 
         $data = selectDB("petwash", "customer", $campos = 'username, senha', $where);  
+        /*TODO: Comparar senhas usando hash */
         if  ($response['senha'] == $data[0]["senha"]){
             $r = [
                 'Mensagem' => 'Usuário Logado. Olá, ' . $data[0]["username"], 
