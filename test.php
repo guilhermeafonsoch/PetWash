@@ -78,5 +78,4 @@ function sign_in($response){
 // login_auth($response_2);
 // echo '<br>';
 // sign_in($response_2);
-
 ?>
