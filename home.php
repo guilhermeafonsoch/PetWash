@@ -70,7 +70,8 @@ foreach($dados_banco as $usuario => $value){
     $dados_banco[$usuario]['senha'] = json_decode($dados_banco[$usuario]['senha'], true);
 }
 
-$match = verificaLista($dados);
+//validar com o Eduardo
+$match = verificaLogin($dados);
 header('Content-Type: application/json');
 
 echo json_encode(info($match));
