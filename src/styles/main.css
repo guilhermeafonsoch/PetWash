@@ -19,7 +19,7 @@ body {
 }
 
 .logo {
-    position:absolute;
+    position:flex;
     top: 2%;
     margin: 5px;
     justify-content: center;

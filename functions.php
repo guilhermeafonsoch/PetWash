@@ -152,7 +152,7 @@ function impede_vazios($response){
         }
     }
     
-    return $valido = true;
+    return  $valido = true;
 }
 
 // function confirma_senha($response){
