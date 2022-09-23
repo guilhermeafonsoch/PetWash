@@ -95,6 +95,13 @@ function email_validation($email){
 
 }
 
+function select_username($username){
+    $where= "username = " . "'" . $username . "';";
+    $data = selectDB("petwash", "customer", $campos = 'customer_id', $where);
+    return $data;
+
+}
+
 function login_auth($response){
     $logado = false;
     if (!impede_vazios($response)){
@@ -154,15 +161,6 @@ function impede_vazios($response){
     
     return  $valido = true;
 }
-
-// function confirma_senha($response){
-//     if ($response['senha'] == $response['confirma_senha']){
-//         return ($password = true);
-//     }
-//     else{
-//         return $password = false;
-//     }    
-// }
 
 // Exemplo de fluxo:
 // login_auth($response_2);
