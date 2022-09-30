@@ -1,18 +1,23 @@
 <?php
+// session_destroy();
+session_start();
 
 include("functions.php");
 
 $login_status = login_auth($_POST);
+$login = $_POST['email'];
+$senha = $_POST['senha']; 
 
-// $username = select_username($_POST['username']);
+if($login_status){
+    $_SESSION['login'] = $login;
+    $_SESSION['senha'] = $senha;
 
-// json_decode($username, true);
-// header('Content-Type: application/json');
-
-if ($login_status){
-    header("Location: home.html");
+    header("Location: home.php");
 }   
 else{
+    unset ($_SESSION['login']);
+    unset ($_SESSION['senha']);
+
     header("Location: index.html");
 }
 
