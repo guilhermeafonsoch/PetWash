@@ -1,12 +1,12 @@
-formCadastro.onsubmit = async (e) => {
-    e.preventDefault();
-  
-    let response = await fetch('php/cadastro.php', {
-      method: 'POST',
-      body: new FormData(formCadastro)
-    });
-    
-    let result = await response.json();
-  
-    document.getElementById('retorno').innerHTML = "Retorno:" + result.Mensagem;
-  };
+var cadastro = document.getElementById('botaoCadastro');
+cadastro.onclick = async (e) => {
+    var senha = document.getElementById('senhaUsuario').value;
+    var confirma_senha = document.getElementById('confirmaSenhaUsuario').value;
+    if(senha != "" && confirma_senha != ""){
+        if (senha == confirma_senha) {
+            alert("Senhas iguais");
+        } else {
+            alert("Senhas diferentes");
+        }
+    }
+}
