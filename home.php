@@ -19,7 +19,7 @@ $username = $dados_usuario[0]["username"];
 $email = $dados_usuario[0]["email"];
 
 ?>
-
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,4 +60,67 @@ $email = $dados_usuario[0]["email"];
         </div>
     </div>
 </body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seu perfil</title>
+
+    <!-- Import Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+    <!-- Ícone de import css -->
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="shortcut icon" type="image/png" href="src/img/logov2.png">
+
+</head>
+
+<body>
+
+    <!-- Import Script Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Header com logo -->
+    <div class="container-flex">
+        <header class="d-flex px-1 py-3 mb-5 border-bottom justify-content-between align-items-center">
+            <a href="index.html">
+                <input type="image" src="src/img/logo_com_texto2.png" class="header-logo px-5 py-2" alt="PetWash Logo">
+            </a>
+
+            <a href="home.php">
+                <input type="image" src="src/img/person-circle.svg" class="header-pficon px-5 py-2" alt="Profile Icon">
+            </a>
+
+        </header>
+    </div>
+
+    <div class="container-flex justify-content-start profile-welcome">
+        <img src="src/img/person-circle.svg">
+        <p>Bem vindo, <?php echo $username; ?>!</p>
+    </div>
+
+    <div class="profile-container-flex justify-content-start mt-5">
+        <div class="d-flex flex-column pf-item">
+            <p class="pf-item-name">Usuário</p>
+            <p class="pf-desc"><?php echo $username; ?></p>
+        </div>
+
+        <div class="d-flex flex-column pf-item">
+            <p class="pf-item-name">Email</p>
+            <p class="pf-desc"><?php echo $email; ?></p>
+        </div>
+    </div>
+
+</body>
+
 </html>

@@ -63,7 +63,7 @@ body, input, textarea, select, button {
 }
 
 .login-container-flex{
-    margin-top: 10rem;
+    margin-top: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -135,7 +135,7 @@ body, input, textarea, select, button {
     min-width: 15rem;
     max-width: auto;
     margin-right: 2rem;
-    font-size: x-large;
+    font-size: large;
 }
 
 .pf-item-name{
