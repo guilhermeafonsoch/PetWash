@@ -12,7 +12,7 @@ if($login_status){
     $_SESSION['login'] = $login;
     $_SESSION['senha'] = $senha;
 
-    header("Location: home.php");
+    header("Location: agenda.php");
 }   
 else{
     unset ($_SESSION['login']);
