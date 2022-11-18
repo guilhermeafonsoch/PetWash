@@ -93,7 +93,7 @@ $email = $dados_usuario[0]["email"];
     <!-- Header com logo -->
     <div class="container-flex">
         <header class="d-flex px-1 py-3 mb-5 border-bottom justify-content-between align-items-center">
-            <a href="index.html">
+            <a href="agenda.php">
                 <input type="image" src="src/img/logo_com_texto2.png" class="header-logo px-5 py-2" alt="PetWash Logo">
             </a>
 
