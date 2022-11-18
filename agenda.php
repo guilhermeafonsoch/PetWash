@@ -59,6 +59,8 @@ $email = $dados_usuario[0]["email"];
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.jss"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/locales/pt-br.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
 
     <!-- Header com logo -->
     <div class="container-flex">
@@ -82,11 +84,24 @@ $email = $dados_usuario[0]["email"];
     <script>
         var el = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(el, {
-            plugins: ['dayGrid', 'bootstrap', 'timeGrid'],
+            plugins: ['interaction', 'dayGrid', 'bootstrap', 'timeGrid'],
             themeSystem: 'bootstrap',
             weekNumbers: true,
             eventLimit: true,
             allDaySlot: false,
+
+            editable: true,
+            selectable: true,
+            eventClick: function(info){
+                info.jsEvent.preventDefault();
+
+                if(info.event.url){
+                    window.open(info.event.url);
+                } else {
+                    Swal.fire(info.event.title, 'Começo: ' + info.event.start + ' - Fim: ' + info.event.end, 'question');
+                }
+            },
+
             events: [
                 {
                     title: 'Teste',
@@ -95,13 +110,13 @@ $email = $dados_usuario[0]["email"];
                 },
                 {
                     title: 'Teste 2',
-                    start: '2022-11-04 14:00',
-                    end: '2022-11-04 16:00'
+                    start: '2022-11-14 14:00',
+                    end: '2022-11-14 16:00'
                 },
                 {
                     title: 'Teste 3',
-                    start: '2022-11-04 16:30',
-                    end: '2022-11-04 20:30'
+                    start: '2022-11-14 16:30',
+                    end: '2022-11-14 20:30'
                 },
             ],
             header: {

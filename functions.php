@@ -24,7 +24,7 @@ function selectDB($dbName, $table, $campos = '*', $where = ''){
     if ($where != ''){
         $where = ' WHERE ' . $where; 
     }
-    $query = "SELECT $campos FROM $dbName.$table" . $where;
+    $query = "SELECT $campos FROM $table" . $where;
     $conn = conexao($dbName);
 	$dados = $conn->query($query)->fetch_all(MYSQLI_ASSOC);
     
